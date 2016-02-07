@@ -32,6 +32,7 @@ Vagrant.configure(2) do |config|
   # Bridged networks make the machine appear as another physical device on
   # your network.
   # config.vm.network "public_network"
+  config.vm.network "private_network", ip: "192.168.0.10"
 
   # Share an additional folder to the guest VM. The first argument is
   # the path on the host to the actual folder. The second argument is
@@ -72,4 +73,35 @@ Vagrant.configure(2) do |config|
   #   sudo apt-get update
   #   sudo apt-get install -y apache2
   # SHELL
+  config.vm.provision "shell", inline: <<-SHELL
+    apt-get update
+    
+    # install vim
+    apt-get install -y vim curl
+    
+    # install latest git
+    apt-get install -y software-properties-common python-software-properties
+    add-apt-repository ppa:git-core/ppa
+    apt-get update
+    apt-get install -y git
+    
+    # install apache httpd
+    sudo apt-get install -y apache2
+    
+    # install latest rvm, latest ruby and latest rubygems
+    gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+    curl -sSL https://get.rvm.io | bash -s stable
+    source /root/.rvm/scripts/rvm
+    rvm install ruby --latest
+    rvm use ruby --latest --default
+    gem update --system
+
+    # install jekyll
+    gem install jekyll
+  SHELL
+
+  # provision several usefull configuration files from guest to guest
+  config.vm.provision "file", source: "~/.gitconfig", destination: ".gitconfig"
+  config.vm.provision "file", source: "~/.ssh/id_rsa", destination: ".ssh/id_rsa"
+  config.vm.provision "file", source: "~/.ssh/id_rsa.pub", destination: ".ssh/id_rsa.pub"
 end
