@@ -1,6 +1,12 @@
 * My First Post
 
 ```php
-    <?php
-        phpinfo();
+phpinfo();
+
+function abc() {
+    return "lol";
+}
+
+abc();
+
 ```
