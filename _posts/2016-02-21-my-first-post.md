@@ -1,12 +1,11 @@
 * My First Post
 
 ```php
-phpinfo();
+    phpinfo();
 
-function abc() {
-    return "lol";
-}
+    function abc() {
+        return "lol";
+    }
 
-abc();
-
+    abc();
 ```
