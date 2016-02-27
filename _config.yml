@@ -8,8 +8,8 @@ permalink:        pretty
 # Setup
 title:            mtheunissen82
 tagline:          'Extension for my brain'
-description:      '<b>/dev/null</b> for stuff i think i need to remember... hardly a blog...'
-url:              https://github.com/algolia/algoliasearch-jekyll-hyde
+description:      '<b>/dev/null</b> for stuff <i>i think</i> i need to remember... hardly a blog...'
+url:              https://mtheunissen82.github.io
 baseurl:          '' 
 # Travis will install Bundler dependencies in ./vendor, so we need to exclude it
 # otherwise Jekyll will try to build it (and fail)
