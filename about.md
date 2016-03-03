@@ -3,14 +3,9 @@ layout: page
 title: About
 ---
 
-At [Algolia][2], we love Jekyll, so we decided to provide an easy-to-use [Jekyll
-plugin][3] to add an awesome search to your blog.
-
-To make things even easier, we also [patched the Hyde theme][4] to give you an
-example.
+My name is Marc Theunissen born in the land of windmills, cloggs and legal grass. During the daytime i do random stuff with PHP and while doing so i try to learn a bit about Linux too.
 
 
-[1]: https://twitter.com/mdo
-[2]: https://www.algolia.com
-[3]: https://github.com/algolia/algoliasearch-jekyll
-[4]: https://github.com/algolia/algoliasearch-jekyll-hyde
+You can find me on Twitter [@mtheunissen82][1] or drop an email on mtheunissen82 at gmail.com .
+
+[1]: https://twitter.com/mtheunissen82
