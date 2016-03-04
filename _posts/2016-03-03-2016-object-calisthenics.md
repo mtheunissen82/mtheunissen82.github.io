@@ -69,5 +69,9 @@ If you have a collection of any type, put them in a separate class/type. This wa
 # OC #8
 *Do not use accessors (getters/setters)*
 
-Dropped for PHP.
+This rule tells you that you shouldnt just create dumb data objects. That is object with only getters/setters and no behaviour. Put the behavior there where it belongs.
 
+Another way this rule is commonly stated is:
+> Tell, don't ask
+
+An [Interesting talk](https://www.youtube.com/watch?v=RlfLCWKxHJ0) in this same context which i liked a lot is from [Misko Hevery](https://www.youtube.com/watch?v=RlfLCWKxHJ0).
