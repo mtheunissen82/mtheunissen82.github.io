@@ -71,7 +71,34 @@ If you have a collection of any type, put them in a separate class/type. This wa
 
 This rule tells you that you shouldnt just create dumb data objects. That is object with only getters/setters and no behaviour. Put the behavior there where it belongs.
 
+A typical piece of code which abuses accessors:
+
+```php
+<?php
+	class Person {
+		private $dateOfBirth;
+
+		function __construct(DateTime $dateOfBirth) {
+			$this->dateOfBirth = $dateOfBirth;
+		}
+
+		public function getDateOfBirth() {
+			return $this->dateOfBirth;
+		}
+	}
+
+	$person = new Person('01-01-2000');
+
+	// somewhere later in your code
+	$dob = $person->getDateOfBirth();
+
+	$diff = $dob->diff(new DateTime('now'));
+
+	print 'This persons age is: ' . $diff->format('Y');
+
+```
+
 Another way this rule is commonly stated is:
 > Tell, don't ask
 
-An [Interesting talk](https://www.youtube.com/watch?v=RlfLCWKxHJ0) in this same context which i liked a lot is from [Misko Hevery](https://www.youtube.com/watch?v=RlfLCWKxHJ0).
+An [Interesting talk](https://www.youtube.com/watch?v=RlfLCWKxHJ0) in this same context (which i liked a lot) from [Misko Hevery](https://www.youtube.com/watch?v=RlfLCWKxHJ0).
