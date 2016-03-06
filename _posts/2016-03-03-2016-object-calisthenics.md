@@ -98,6 +98,30 @@ $diff = $dob->diff(new DateTime('now'));
 print 'This persons age is: ' . $diff->format('Y');
 ```
 
+A better way would be to encapsulate the age determining logic:
+
+```php
+<?php
+
+class Person {
+	private $dateOfBirth;
+
+	function __construct(DateTime $dateOfBirth) {
+		$this->dateOfBirth = $dateOfBirth;
+	}
+
+	public function age() {
+		$diff = $this->dateOfBirth->diff(new DateTime('now'));
+		return $diff->format('Y');
+	}
+}
+
+$person = new Person('01-01-2000');
+
+// somewhere later in your code
+print 'This persons age is: ' . $person->age();
+```
+
 Another way this rule is commonly stated is:
 > Tell, don't ask
 
