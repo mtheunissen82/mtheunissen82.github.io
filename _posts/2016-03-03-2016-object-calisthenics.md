@@ -123,6 +123,7 @@ print 'This persons age is: ' . $person->age();
 ```
 
 Another way this rule is commonly stated is:
+
 > Tell, don't ask
 
 An [Interesting talk](https://www.youtube.com/watch?v=RlfLCWKxHJ0) in this same context (which i liked a lot) from [Misko Hevery](https://www.youtube.com/watch?v=RlfLCWKxHJ0).
