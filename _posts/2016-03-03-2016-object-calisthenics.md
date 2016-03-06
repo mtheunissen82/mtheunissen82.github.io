@@ -75,27 +75,27 @@ A typical piece of code which abuses accessors:
 
 ```php
 <?php
-	class Person {
-		private $dateOfBirth;
 
-		function __construct(DateTime $dateOfBirth) {
-			$this->dateOfBirth = $dateOfBirth;
-		}
+class Person {
+	private $dateOfBirth;
 
-		public function getDateOfBirth() {
-			return $this->dateOfBirth;
-		}
+	function __construct(DateTime $dateOfBirth) {
+		$this->dateOfBirth = $dateOfBirth;
 	}
 
-	$person = new Person('01-01-2000');
+	public function getDateOfBirth() {
+		return $this->dateOfBirth;
+	}
+}
 
-	// somewhere later in your code
-	$dob = $person->getDateOfBirth();
+$person = new Person('01-01-2000');
 
-	$diff = $dob->diff(new DateTime('now'));
+// somewhere later in your code
+$dob = $person->getDateOfBirth();
 
-	print 'This persons age is: ' . $diff->format('Y');
+$diff = $dob->diff(new DateTime('now'));
 
+print 'This persons age is: ' . $diff->format('Y');
 ```
 
 Another way this rule is commonly stated is:
