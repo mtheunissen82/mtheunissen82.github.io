@@ -9,7 +9,8 @@ Well, apparently it is a fossil from yeh old Unix days.
 The abbreviation "rc" stands for `runcom` which in turn is short for `run commands`.
 
 Runcom was a facility from the MIT [Compatible Time-Sharing System (CTSS)][1],
-one of the first time-sharing operating systems first demonstrated in 1961, that would run a number of commands from a file.  
+one of the first time-sharing operating systems first demonstrated in 1961, that would run a number of commands from a file.
+
 This being cool and funky, the Unix grandfathers determined to adopt this for naming their scripts too.
 
 Source: [kb.iu.edu][2]
