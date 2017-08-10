@@ -6,7 +6,7 @@ title: GPG
 Fingerprint: 63ED FD29 B845 7753 662E CA0D 8491 DD0B 5D61 D3C0
 
 
-<a href="/gpg-raw.html">Raw key</a>
+<a href="/gpg-raw.asc">Raw key</a>
 
 <pre>
 -----BEGIN PGP PUBLIC KEY BLOCK-----
